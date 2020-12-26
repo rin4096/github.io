@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>筆記本電腦接入Thunderbolt eGPU淺度體驗 | Rin的Blog</title><meta name="keywords" content="eGPU,Thunderbolt"><meta name="author" content="Rin"><meta name="copyright" content="Rin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="換了Blog框架之後我就想寫一篇水文了，那就弄一篇壕文好了。 在2019年考入大學之後，我當時就夢想著這樣的情景：在宿舍接上顯卡塢揮發接近臺式機的性能，要出去上課的時候只要把綫纜拔掉就可以出門了。性能需求與便携的需求都可以滿足。但還是並不如意，我只想説我并不推薦這種玩法。 裝備清單以下是我在2019年買的電子產品拿來跑TB3。 xps 15 2019版這一臺筆電配置了一個滿速雷劈3端口，可以接TB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="筆記本電腦接入Thunderbolt eGPU淺度體驗">
+<meta property="og:url" content="https://blog.rin.moe/ex-graphic-card/index.html">
+<meta property="og:site_name" content="Rin的Blog">
+<meta property="og:description" content="換了Blog框架之後我就想寫一篇水文了，那就弄一篇壕文好了。 在2019年考入大學之後，我當時就夢想著這樣的情景：在宿舍接上顯卡塢揮發接近臺式機的性能，要出去上課的時候只要把綫纜拔掉就可以出門了。性能需求與便携的需求都可以滿足。但還是並不如意，我只想説我并不推薦這種玩法。 裝備清單以下是我在2019年買的電子產品拿來跑TB3。 xps 15 2019版這一臺筆電配置了一個滿速雷劈3端口，可以接TB">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://blog.rin.moe/ex-graphic-card/top.jpg">
+<meta property="article:published_time" content="2020-08-28T08:00:22.000Z">
+<meta property="article:modified_time" content="2020-11-13T13:50:53.689Z">
+<meta property="article:author" content="Rin">
+<meta property="article:tag" content="eGPU">
+<meta property="article:tag" content="Thunderbolt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.rin.moe/ex-graphic-card/top.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.rin.moe/ex-graphic-card/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js" defer></script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-176574052-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-176574052-1');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"OICWSFVGFH","apiKey":"8f2ce52226d002a5bfe3c0b577917e06","indexName":"dev_PASSAGE","hits":{"per_page":6},"languages":{"input_placeholder":"搜尋文章","hits_empty":"找不到您查詢的內容：${query}","hits_stats":"找到 ${hits} 條結果，用時 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-11-13 21:50:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">標籤</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分類</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標簽</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/aboutme/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/ex-graphic-card/top.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Rin的Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標簽</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/aboutme/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">筆記本電腦接入Thunderbolt eGPU淺度體驗</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2020-08-28T08:00:22.000Z" title="發表於 2020-08-28 16:00:22">2020-08-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2020-11-13T13:50:53.689Z" title="更新於 2020-11-13 21:50:53">2020-11-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E8%A1%93%E8%B2%BC/">技術貼</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字數總計:</span><span class="word-count">739</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">閲讀時長:</span><span>2分鐘</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>換了Blog框架之後我就想寫一篇水文了，那就弄一篇壕文好了。</p>
+<p>在2019年考入大學之後，我當時就夢想著這樣的情景：在宿舍接上顯卡塢揮發接近臺式機的性能，要出去上課的時候只要把綫纜拔掉就可以出門了。性能需求與便携的需求都可以滿足。但還是並不如意，我只想説我并不推薦這種玩法。</p>
+<h2 id="裝備清單"><a href="#裝備清單" class="headerlink" title="裝備清單"></a>裝備清單</h2><p>以下是我在2019年買的電子產品拿來跑TB3。</p>
+<h3 id="xps-15-2019版"><a href="#xps-15-2019版" class="headerlink" title="xps 15 2019版"></a>xps 15 2019版</h3><p>這一臺筆電配置了一個滿速雷劈3端口，可以接TB3設備。</p>
+<h3 id="Razor-Core-幻彩版"><a href="#Razor-Core-幻彩版" class="headerlink" title="Razor Core 幻彩版"></a>Razor Core 幻彩版</h3><p>這個顯卡塢可以插上任何長度滿槽顯卡，而且配備了4個USB 3.1 Gen1與一個以太網接口（雖然用不到），内置電源完全足夠性能釋放。</p>
+<h3 id="4k顯示屏"><a href="#4k顯示屏" class="headerlink" title="4k顯示屏"></a>4k顯示屏</h3><p>外接顯示屏看著爽，而且這不會有内屏降低性能的問題。</p>
+<h3 id="鼠標與鍵盤"><a href="#鼠標與鍵盤" class="headerlink" title="鼠標與鍵盤"></a>鼠標與鍵盤</h3><p>這是必備的外接設備，插在顯卡塢上。</p>
+<h3 id="RTX-2080ti-顯示卡"><a href="#RTX-2080ti-顯示卡" class="headerlink" title="RTX 2080ti 顯示卡"></a>RTX 2080ti 顯示卡</h3><p>最重要的配件了。</p>
+<h2 id="體驗"><a href="#體驗" class="headerlink" title="體驗"></a>體驗</h2><p>先描述一下配置</p>
+<ul>
+<li>CPU：i9-9980hk</li>
+<li>RAM：64GB DDR4@2666 SODIMM</li>
+<li>GPU：ASUS ROG STRIX 2080ti OC</li>
+</ul>
+<p>跑分并不怎樣，FSE跑了10761， time spy跑了7345，這當做一個參考吧。而且這個雷劈三的帶寬除了顯卡還有其他硬件占用著這個通道導致帶寬沒法完全用在顯卡上。</p>
+<p>由於我比較宅，經常宅在宿舍，有了這個大顯示屏去圖書館幹嘛，在宿舍生產力就已經高的恐怖了。（這好像跟顯卡沒有什麽關係）</p>
+<p>在游戲上的體驗肯定會比筆電上的GTX1650好很多，尤其是在跑大型游戲中，比如FS2020。</p>
+<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><h3 id="死機問題（已經解決）"><a href="#死機問題（已經解決）" class="headerlink" title="死機問題（已經解決）"></a>死機問題（已經解決）</h3><p>這個問題困擾了我一整個2019年下半年，直到今年回學校才解決。死機是怎樣的呢：在低負載的情況下，做日常工作或者打開網頁看視頻的時候忽然閒熒幕凍結，鼠標動不了，按鍵盤沒有任何反應，只能强制重啓才能解決，周而復始。我嘗試了許許多多方法，禁用板載顯卡，使用ddu重新安裝顯卡驅動，核芯顯卡驅動換成intel官方驅動等等。在今年，安裝了官方核心顯卡驅動（不是Dell的魔改驅動）與未插上顯卡的情況下安裝RTX2080ti的驅動成功的解決了這個問題。</p>
+<h3 id="畫面循環卡頓問題"><a href="#畫面循環卡頓問題" class="headerlink" title="畫面循環卡頓問題"></a>畫面循環卡頓問題</h3><p>這個問題也很魔性，畫面循環性間歇卡頓，很迷。</p>
+<h2 id="建議上TB3嗎"><a href="#建議上TB3嗎" class="headerlink" title="建議上TB3嗎"></a>建議上TB3嗎</h2><p>能不上TB3就不上TB3。我這一整套設備下來完全足夠買一個超級本外加一臺與Razer core差不多大小的itx主機，性能又能得到完整的釋放，便携性也得到了保證，豈不美哉？</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Rin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://blog.rin.moe/ex-graphic-card/">https://blog.rin.moe/ex-graphic-card/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://blog.rin.moe" target="_blank">Rin的Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/eGPU/">eGPU</a><a class="post-meta__tags" href="/tags/Thunderbolt/">Thunderbolt</a></div><div class="post_share"><div class="social-share" data-image="/ex-graphic-card/top.jpg" data-sites="facebook,twitter,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打賞<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/btc.png" target="_blank"><img class="post-qr-code-img" data-lazy-src="/img/btc.png" alt="btc（都是放著玩）"/></a><div class="post-qr-code-desc">btc（都是放著玩）</div></li><li class="reward-item"><a href="/img/eth.png" target="_blank"><img class="post-qr-code-img" data-lazy-src="/img/eth.png" alt="eth（都是放著玩）"/></a><div class="post-qr-code-desc">eth（都是放著玩）</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/end-of-2020/"><img class="prev-cover" data-lazy-src="/end-of-2020/top.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">2020年終總結</div></div></a></div><div class="next-post pull-right"><a href="/smart-home/"><img class="next-cover" data-lazy-src="/smart-home/top.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">智能家居初體驗</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 評論</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Rin</div><div class="author-info__description">好無聊</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">標籤</div><div class="length-num">16</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分類</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://twitter.com/rin4096"><i class="fab fa-twitter"></i><span>Follow</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:hoshizora@rin.moe" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">歡迎來到我的部落格</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A3%9D%E5%82%99%E6%B8%85%E5%96%AE"><span class="toc-number">1.</span> <span class="toc-text">裝備清單</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#xps-15-2019%E7%89%88"><span class="toc-number">1.1.</span> <span class="toc-text">xps 15 2019版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Razor-Core-%E5%B9%BB%E5%BD%A9%E7%89%88"><span class="toc-number">1.2.</span> <span class="toc-text">Razor Core 幻彩版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4k%E9%A1%AF%E7%A4%BA%E5%B1%8F"><span class="toc-number">1.3.</span> <span class="toc-text">4k顯示屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BC%A0%E6%A8%99%E8%88%87%E9%8D%B5%E7%9B%A4"><span class="toc-number">1.4.</span> <span class="toc-text">鼠標與鍵盤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RTX-2080ti-%E9%A1%AF%E7%A4%BA%E5%8D%A1"><span class="toc-number">1.5.</span> <span class="toc-text">RTX 2080ti 顯示卡</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%94%E9%A9%97"><span class="toc-number">2.</span> <span class="toc-text">體驗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%B6%B3"><span class="toc-number">3.</span> <span class="toc-text">不足</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%BB%E6%A9%9F%E5%95%8F%E9%A1%8C%EF%BC%88%E5%B7%B2%E7%B6%93%E8%A7%A3%E6%B1%BA%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">死機問題（已經解決）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%95%AB%E9%9D%A2%E5%BE%AA%E7%92%B0%E5%8D%A1%E9%A0%93%E5%95%8F%E9%A1%8C"><span class="toc-number">3.2.</span> <span class="toc-text">畫面循環卡頓問題</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E8%AD%B0%E4%B8%8ATB3%E5%97%8E"><span class="toc-number">4.</span> <span class="toc-text">建議上TB3嗎</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/end-of-2020/" title="2020年終總結"><img data-lazy-src="/end-of-2020/top.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020年終總結"/></a><div class="content"><a class="title" href="/end-of-2020/" title="2020年終總結">2020年終總結</a><time datetime="2020-12-26T16:00:00.000Z" title="發表於 2020-12-27 00:00:00">2020-12-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ex-graphic-card/" title="筆記本電腦接入Thunderbolt eGPU淺度體驗"><img data-lazy-src="/ex-graphic-card/top.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="筆記本電腦接入Thunderbolt eGPU淺度體驗"/></a><div class="content"><a class="title" href="/ex-graphic-card/" title="筆記本電腦接入Thunderbolt eGPU淺度體驗">筆記本電腦接入Thunderbolt eGPU淺度體驗</a><time datetime="2020-08-28T08:00:22.000Z" title="發表於 2020-08-28 16:00:22">2020-08-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/smart-home/" title="智能家居初體驗"><img data-lazy-src="/smart-home/top.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智能家居初體驗"/></a><div class="content"><a class="title" href="/smart-home/" title="智能家居初體驗">智能家居初體驗</a><time datetime="2020-08-04T03:29:42.000Z" title="發表於 2020-08-04 11:29:42">2020-08-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/travel/" title="爲啥我不喜歡寫遊記"><img data-lazy-src="/travel/top.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="爲啥我不喜歡寫遊記"/></a><div class="content"><a class="title" href="/travel/" title="爲啥我不喜歡寫遊記">爲啥我不喜歡寫遊記</a><time datetime="2020-06-13T06:51:36.000Z" title="發表於 2020-06-13 14:51:36">2020-06-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%82%A8/" title="您"><img data-lazy-src="/%E6%82%A8/top.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="您"/></a><div class="content"><a class="title" href="/%E6%82%A8/" title="您">您</a><time datetime="2020-04-29T19:02:13.000Z" title="發表於 2020-04-30 03:02:13">2020-04-30</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Rin</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="blog.rin.moe/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直達評論"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/algolia.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://blog.rin.moe/ex-graphic-card/'
+    this.page.identifier = 'ex-graphic-card/'
+    this.page.title = '筆記本電腦接入Thunderbolt eGPU淺度體驗'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://rin-moe.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Disqus' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks" mobile="false"></canvas><script src="/js/third-party/fireworks.js"></script></div></body></html>
