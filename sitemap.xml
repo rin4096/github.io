@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.rin.moe/legitimacy-changes-in-china/</loc>
+    
+    <lastmod>2020-12-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.rin.moe/end-of-2020/</loc>
     
     <lastmod>2020-12-29</lastmod>
@@ -124,6 +131,20 @@
   
   <url>
     <loc>https://blog.rin.moe/tags/Thunderbolt/</loc>
+    <lastmod>2020-12-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/%E7%A4%BE%E6%9C%83%E7%A7%91%E5%AD%B8/</loc>
+    <lastmod>2020-12-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/%E5%90%88%E6%B3%95%E6%80%A7/</loc>
     <lastmod>2020-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
