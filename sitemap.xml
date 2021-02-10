@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.rin.moe/legitimacy-changes-in-china/</loc>
+    <loc>https://blog.rin.moe/refind-arch/</loc>
     
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-02-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/sponge/</loc>
+    
+    <lastmod>2021-02-10</lastmod>
     
   </url>
   
@@ -23,21 +30,7 @@
   </url>
   
   <url>
-    <loc>https://blog.rin.moe/refind-arch/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.rin.moe/smart-home/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/sponge/</loc>
     
     <lastmod>2020-12-29</lastmod>
     
@@ -102,134 +95,120 @@
 
   <url>
     <loc>https://blog.rin.moe/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://blog.rin.moe/tags/2020%E5%B9%B4/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/%E7%B8%BD%E7%B5%90/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/eGPU/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/Thunderbolt/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/%E7%A4%BE%E6%9C%83%E7%A7%91%E5%AD%B8/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/%E5%90%88%E6%B3%95%E6%80%A7/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.rin.moe/tags/Refind/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.rin.moe/tags/arch-linux/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.rin.moe/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <loc>https://blog.rin.moe/tags/2020%E5%B9%B4/</loc>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.rin.moe/tags/Debian/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/Mcsmanager/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/Minecraft/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/Sponge/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.rin.moe/tags/Forge/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <loc>https://blog.rin.moe/tags/%E7%B8%BD%E7%B5%90/</loc>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.rin.moe/tags/%E6%97%85%E9%81%8A/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/Debian/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/Mcsmanager/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/Minecraft/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/Sponge/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/Forge/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/eGPU/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/Thunderbolt/</loc>
+    <lastmod>2021-02-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.rin.moe/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/</loc>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.rin.moe/tags/%E5%90%B9%E6%B0%B4/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.rin.moe/tags/%E5%BB%A2%E8%B2%BC/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.rin.moe/tags/%E6%82%A8/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -237,15 +216,15 @@
 
   
   <url>
-    <loc>https://blog.rin.moe/categories/%E5%90%B9%E6%B0%B4%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <loc>https://blog.rin.moe/categories/%E6%8A%80%E8%A1%93%E8%B2%BC/</loc>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.rin.moe/categories/%E6%8A%80%E8%A1%93%E8%B2%BC/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <loc>https://blog.rin.moe/categories/%E5%90%B9%E6%B0%B4%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2021-02-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
